@@ -1,9 +1,19 @@
 export const global = {
-  componenteFormativo:
-    'Componente Formativo con un nombre extremadamente largo y extenso',
-  descripcionCurso:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis vestibulum quam bibendum varius. Quisque pretium at nulla sit amet placerat. Vestibulum consequat suscipit accumsan. Proin pharetra congue enim et tempus. Sed sodales dui volutpat, placerat tellus accumsan, semper est. Phasellus nec lorem elementum, mattis quam eget, vestibulum nibh. Sed.',
-  imagenBannerPrincipal: require('@/assets/curso/banner-princiapal.svg'),
+  nombrePrograma:
+    'Atención integral de urgencias a víctimas de ataque con agentes químicos',
+  codigo: '33110258',
+  horas: 48,
+  semanas: 4,
+  modalidad: 'virtual',
+  requisitosIngrso: [
+    'Solicitud de las Instituciones del Sistema General de Seguridad Social en Salud.',
+    'Profesionales, tecnólogos y técnicos de salud que brindan atención a las víctimas de ataque con agentes químicos.',
+    'Cumplir con el trámite de selección definido por el Centro de Formación.',
+    'Se requiere que el aprendiz AVA (Ambientes Virtuales de Aprendizaje) tenga dominio de elementos básicos en el manejo de herramientas informáticas y de comunicación como correo electrónico, chat, procesadores de texto, software para presentaciones, navegadores de Internet, y otros sistemas y herramientas tecnológicas necesarias para la formación virtual.',
+  ],
+  // imagenBannerPrincipal: require('@/assets/curso/banner-princiapal.svg'),
+  videoBannerPrincipal:
+    '<iframe data-v-1f9e4816="" width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>',
   fondoBannerPrincipal: require('@/assets/curso/fondo-banner-principal.png'),
 }
 

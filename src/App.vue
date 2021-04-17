@@ -2,35 +2,26 @@
 #app.app
   Header
   .contenedor-principal
-    AsideMenu
-    section.seccion-principal(:class="{'seccion-principal--barra-avance-open' : !menuState}")
-      router-view
+    section.seccion-principal
+      Inicio
       footer
-  BarraAvance
 
 </template>
 
 <script>
 import { global } from './config/global'
-import AsideMenu from './components/plantilla/AsideMenu'
 import Header from './components/plantilla/Header'
-import BarraAvance from './components/plantilla/BarraAvance'
+import Inicio from './views/Inicio'
 export default {
   name: 'App',
   components: {
-    AsideMenu,
     Header,
-    BarraAvance,
+    Inicio,
   },
   data: () => ({
     menuOpen: false,
     globalData: global,
   }),
-  computed: {
-    menuState() {
-      return this.$store.getters.isMenuOpen
-    },
-  },
   created() {
     document.title = this.globalData.componenteFormativo
   },

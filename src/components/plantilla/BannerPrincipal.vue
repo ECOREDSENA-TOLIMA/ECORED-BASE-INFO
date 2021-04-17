@@ -1,24 +1,43 @@
 <template lang="pug">
 .banner-principal
-  .container.tarjeta.p-4.ps-sm-5.pe-sm-5.pt-sm-5.pb-0(
+  .container.tarjeta.p-4.p-sm-5(
     :style="{'background-image': `url(${globalData.fondoBannerPrincipal})`}"
   )
-    .row.justify-content-around
-      .col-lg-7.col-xxl-5.banner-principal__info.pb-4.pb-sm-5
-        //- .banner-principal__programa
-        //-   span.text-small.insignia.me-2 Programa
-        //-   p.text-small.mb-0 {{globalData.programaFormacion}}
-        .banner-principal__componente
-          h1.mb-0 {{globalData.componenteFormativo}}
-        .banner-principal__descripcion
-          p.mb-0 {{globalData.descripcionCurso}}
-        .banner-principal__accion
-          router-link.boton(:to="{name: iniciarLnk.nombreRuta }")
-            span.me-1 Iniciar
-            i(class="fas fa-angle-right")
+    .row.justify-content-around.align-items-center
+      .col-lg-7.col-xxl-6.banner-principal__info
+        .banner-principal__programa
+          .h4.mb-0 {{globalData.nombrePrograma}}
+        .h2 Información del programa
 
-      .d-none.d-lg-block.col-lg-5.align-self-end
-        img(:src="globalData.imagenBannerPrincipal")
+        .banner-principal__datos
+          ul
+            li.mb-3.banner-principal__datos__item
+              p.h6.mb-0.me-3.banner-principal__datos__item__titulo Nombre del programa: 
+              p.banner-principal__datos__item__texto {{globalData.nombrePrograma}}
+            li.mb-3.banner-principal__datos__item
+              p.h6.mb-0.me-3.banner-principal__datos__item__titulo Código: 
+              p.banner-principal__datos__item__texto {{globalData.codigo}}
+            li.mb-3.banner-principal__datos__item
+              p.h6.mb-0.me-3.banner-principal__datos__item__titulo Total Horas: 
+              p.banner-principal__datos__item__texto {{globalData.horas}} hora{{globalData.horas > 1 ? 's':''}}
+            li.mb-3.banner-principal__datos__item
+              p.h6.mb-0.me-3.banner-principal__datos__item__titulo Duración en semanas: 
+              p.banner-principal__datos__item__texto {{globalData.semanas}} semana{{globalData.semanas > 1 ? 's':''}}
+            li.mb-3.banner-principal__datos__item
+              p.h6.mb-0.me-3.banner-principal__datos__item__titulo Modalidad: 
+              p.banner-principal__datos__item__texto {{globalData.modalidad}}
+            li.mb-3.banner-principal__datos__item
+              p.h6.mb-0.me-3.banner-principal__datos__item__titulo Requisito de ingreso: 
+              .banner-principal__datos__item__texto
+                ul.lista-ul
+                  li(v-for="(item,index) in globalData.requisitosIngrso" :key="'req-'+index")
+                    i.lista-ul__vineta
+                    p {{item}}
+
+      .d-none.d-lg-block.col-lg-5
+        img(v-if="globalData.imagenBannerPrincipal" :src="globalData.imagenBannerPrincipal")
+        .video(v-else-if="globalData.videoBannerPrincipal" v-html="globalData.videoBannerPrincipal")
+
 </template>
 
 <script>
@@ -35,6 +54,8 @@ export default {
 
 <style lang="sass" scoped>
 .banner-principal
+  *
+    color: $colorTextoBannerPrincipal
   p, h1
     color: $white
 
@@ -42,7 +63,6 @@ export default {
     background-color: $color-curso-a
     background-size: cover
     background-position: center
-
 
   &__info
     display: flex
@@ -53,15 +73,20 @@ export default {
     display: flex
     align-items: center
     margin-bottom: 20px
+    & > div
+      text-transform: uppercase
 
-  &__componente
-    margin-bottom: 20px
-    h1
-      line-height: 1.1em
+  &__datos
+    *
+      line-height: 1.2em
 
-      @media (max-width: $bp-max-xs)
-        font-size: 2em
-
-  &__descripcion
-    margin-bottom: 20px
+    &__item
+      display: flex
+      // align-items: center
+      &__titulo
+        flex: 1
+        text-align: right
+      &__texto
+        margin-top: 0.15em
+        flex: 3
 </style>
