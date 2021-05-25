@@ -1,3 +1,8 @@
+# **Solución error Titulo**
+1. Abrir el archivo index.html ubicado en la carpeta de public 
+2. Remplazar la linea 8 de nuestro codigo por el titulo correspondiente al programa 
+![imagen de muestra](src/assets/template/solucion.png 'Title')
+
 # **sena-base-2021 v1.2.1**
 
 ## **Enlace GitHubPages**
