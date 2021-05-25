@@ -3,6 +3,8 @@
 2. Remplazar la linea 8 de nuestro codigo por el titulo correspondiente al programa 
 ![imagen de muestra](src/assets/template/Solucion.jpg 'Title')
 
+![imagen de muestra 2](src/assets/template/solucion_2.jpg 'Title')
+
 # **sena-base-2021 v1.2.1**
 
 ## **Enlace GitHubPages**
