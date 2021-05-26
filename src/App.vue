@@ -31,4 +31,34 @@ export default {
   line-height: 1.1em
   &__logo
     width: 50px
+
+.banner-principal
+  *
+    color: $color-banner-text !important
+  .tarjeta
+    background-color: $color-banner-fondo
+    background-size: cover
+    background-position: center
+  &__info
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__programa
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    & > div
+      text-transform: uppercase
+  &__datos
+    *
+      line-height: 1.2em
+    &__item
+      display: flex
+      // align-items: center
+      &__titulo
+        flex: 1
+        text-align: right
+      &__texto
+        margin-top: 0.15em
+        flex: 3
 </style>

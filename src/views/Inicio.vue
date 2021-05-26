@@ -1,6 +1,6 @@
 <template lang="pug">
 section
-  .banner-principal.texto-blanco.mb-5
+  .banner-principal.mb-5
     .container.tarjeta.p-4.p-sm-5(
       :style="{'background-image': `url(${require('@/assets/curso/fondo-banner-principal.png')})`}"
     )
