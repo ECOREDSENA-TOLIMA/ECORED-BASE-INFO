@@ -1,15 +1,8 @@
-# **Solución error Titulo**
-1. Abrir el archivo index.html ubicado en la carpeta de public 
-2. Remplazar la linea 8 de nuestro codigo por el titulo correspondiente al programa 
-![imagen de muestra](src/assets/template/Solucion.jpg 'Title')
-
-![imagen de muestra 2](src/assets/template/solucion_2.jpg 'Title')
-
-# **sena-base-2021 v1.2.1**
+# **sena-base-info-2021 v1.1.0**
 
 ## **Enlace GitHubPages**
 
-[https://ecored-sena.github.io/ECORED-BASE-2021](https://ecored-sena.github.io/ECORED-BASE-2021)
+[https://github.com/ECORED-SENA/ECORED-BASE-INFO-2021](https://github.com/ECORED-SENA/ECORED-BASE-INFO-2021)
 
 #
 
@@ -19,7 +12,11 @@
 
 ### 2. Instalar extención [EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-### 3. Instalación de dependencias
+### 3. Asegurarce que el repositorio tiene TODOS los archivos de la [BASE](https://github.com/ECORED-SENA/ECORED-BASE-2021)
+
+### 4. Revisar que el archivo package.json en la línea ``"ecored-base-pkg": "*.*.*"`` tenga la [última versión](https://www.npmjs.com/package/ecored-base-pkg)
+
+### 5. Instalación de dependencias
 
 ```
 npm install
@@ -47,15 +44,13 @@ npm run lint
 
 #
 
-## **Despues del primer Push**
+## **Actualizar dist en GitHub Pages**
 
-### **Creación de subtree para GitHub Pages**
-
-#### 1. Entrar al repositorion en GitHub
+#### 1. Entrar al repositorio en GitHub
 
 #### 2. Entrar a la pestaña "Actions"
 
-#### 3. Seleccionar "Primera acción" en "workflows"
+#### 3. Seleccionar "Crear Dist" en "workflows"
 
 #### 4. Hacer clik en "Run workflow"
 
@@ -64,23 +59,5 @@ npm run lint
 #### 6. Hacer clik "Run workflow
 
 ![instrucciones despues del primer push](src/assets/template/pasos.jpg 'Title')
-
-#
-
-## **Asignar nuevo subtree a GitHub Pages**
-
-#### 1. Entrar al repositorion en GitHub
-
-#### 2. Entrar a la pestaña "Settings"
-
-#### 3. En la seccion "GitHub Pages", en "Source" seleccionamos "gh-pages" y hacer clik en "Save"
-
-#### 4. Copiar y pegar el link en el README.md
-
-#
-
-## **Actualizar dist en GitHub Pages**
-
-#### Seguir los pasos anteriores pero en el paso 3 seleccionar "Crear Dist" en lugar de "Primera acción"
 
 #

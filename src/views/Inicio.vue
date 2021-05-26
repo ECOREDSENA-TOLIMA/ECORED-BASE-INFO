@@ -1,7 +1,53 @@
 <template lang="pug">
 section
-  BannerPrincipal.mb-5
+  .banner-principal.texto-blanco.mb-5
+    .container.tarjeta.p-4.p-sm-5(
+      :style="{'background-image': `url(${require('@/assets/curso/fondo-banner-principal.png')})`}"
+    )
+      .row.justify-content-around.align-items-center
+        .col-lg-7.col-xxl-6.banner-principal__info
+          .banner-principal__programa
+            .h4.mb-0 Atención integral de urgencias a víctimas de ataque con agentes químicos
+          
+          .h2 Información del programa
+          .banner-principal__datos
+            ul
+              li.mb-3.banner-principal__datos__item
+                p.h6.mb-0.me-3.banner-principal__datos__item__titulo Nombre del programa: 
+                p.banner-principal__datos__item__texto Atención integral de urgencias a víctimas de ataque con agentes químicos
+              li.mb-3.banner-principal__datos__item
+                p.h6.mb-0.me-3.banner-principal__datos__item__titulo Código: 
+                p.banner-principal__datos__item__texto 33110258
+              li.mb-3.banner-principal__datos__item
+                p.h6.mb-0.me-3.banner-principal__datos__item__titulo Total Horas: 
+                p.banner-principal__datos__item__texto 48 Horas
+              li.mb-3.banner-principal__datos__item
+                p.h6.mb-0.me-3.banner-principal__datos__item__titulo Duración en semanas: 
+                p.banner-principal__datos__item__texto 4 Semanas
+              li.mb-3.banner-principal__datos__item
+                p.h6.mb-0.me-3.banner-principal__datos__item__titulo Modalidad: 
+                p.banner-principal__datos__item__texto virtual
+              li.mb-3.banner-principal__datos__item
+                p.h6.mb-0.me-3.banner-principal__datos__item__titulo Requisito de ingreso: 
+                .banner-principal__datos__item__texto
+                  ul.lista-ul
+                    li
+                      i.lista-ul__vineta
+                      p Solicitud de las Instituciones del Sistema General de Seguridad Social en Salud.
+                    li
+                      i.lista-ul__vineta
+                      p Profesionales, tecnólogos y técnicos de salud que brindan atención a las víctimas de ataque con agentes químicos.
+                    li
+                      i.lista-ul__vineta
+                      p Cumplir con el trámite de selección definido por el Centro de Formación.
+                    li
+                      i.lista-ul__vineta
+                      p Se requiere que el aprendiz AVA (Ambientes Virtuales de Aprendizaje) tenga dominio de elementos básicos en el manejo de herramientas informáticas y de comunicación como correo electrónico, chat, procesadores de texto, software para presentaciones, navegadores de Internet, y otros sistemas y herramientas tecnológicas necesarias para la formación virtual.
 
+        .d-none.d-lg-block.col-lg-5
+          //- img(src="@/assets/curso/banner-princiapal.svg")
+          .video
+            | <iframe data-v-1f9e4816="" width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
 
   .container.tarjeta.tarjeta__template--azul-claro.px-3.py-4.px-sm-5.pb-sm-5.mb-5
     .titulo__template--a.mb-4
@@ -36,81 +82,21 @@ section
       br
       | Igualmente, debe estimular de manera permanente la autocrítica y la reflexión del aprendiz sobre el quehacer y los resultados de aprendizaje que logra a través de la vinculación activa de las cuatro fuentes de información para la construcción de conocimiento:
 
-
   //- Créditos
   .container.tarjeta.tarjeta__template--azul-claro.px-3.py-4.px-sm-5.mb-5
     .titulo__template--a.mb-4
       span.h6 Créditos
 
-    CreditosComp
+    Creditos
 
   Footer
-  
 
 </template>
 <script>
-import { menuPrincipal } from '../config/global'
-import BannerPrincipal from '../components/plantilla/BannerPrincipal'
-import CreditosComp from '../components/plantilla/CreditosComp'
-import Footer from '../components/plantilla/Footer'
 export default {
   name: 'Inicio',
-  components: {
-    BannerPrincipal,
-    CreditosComp,
-    Footer,
-  },
-  data: () => ({
-    menuPrincipalData: menuPrincipal,
-  }),
-  computed: {
-    desarrolloContenidosData() {
-      const allMenuData = [
-        ...this.menuPrincipalData.menu,
-        ...this.menuPrincipalData.subMenu,
-      ]
-      return allMenuData.filter(item => item.desarrolloContenidos)
-    },
-  },
+  data: () => ({}),
 }
 </script>
 
-<style lang="sass" scoped>
-.resultados-aprendizaje
-  &__item
-    margin-bottom: 20px
-    &:last-child
-      margin-bottom: 0
-
-.desarrollo-contenidos
-  &__item
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin-bottom: 25px
-    padding: 5px
-    border-radius: $base-border-radius
-
-    &__texto
-      display: flex
-      align-items: center
-
-    &__icono
-      display: block
-      background-color: $color-sistema-g
-      font-size: 20px
-      font-weight: $base-black-font-weight
-      text-align: center
-      padding: 10px
-      line-height: 1em
-      width: 40px
-      margin-right: 15px
-
-    &:last-child
-      margin-bottom: 0
-
-    &:hover
-      background-color: $color-sistema-g
-      font-weight: $base-black-font-weight
-      color: $color-sistema-a
-</style>
+<style lang="sass"></style>

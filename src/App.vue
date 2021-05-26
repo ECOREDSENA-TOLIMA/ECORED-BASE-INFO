@@ -1,44 +1,34 @@
 <template lang="pug">
 #app.app
-  Header
+  header.header
+    .container
+      .row.align-items-center.justify-content-between
+        .col.col-sm-auto.d-flex.align-items-center.justify-content-between.justify-content-sm-star
+          img.header__logo.me-sm-5(src="@/assets/template/logo-sena-naranja.svg")
   .contenedor-principal
     section.seccion-principal
       Inicio
-      footer
-
 </template>
 
 <script>
-import { global } from './config/global'
-import Header from './components/plantilla/Header'
 import Inicio from './views/Inicio'
 export default {
   name: 'App',
   components: {
-    Header,
     Inicio,
-  },
-  data: () => ({
-    menuOpen: false,
-    globalData: global,
-  }),
-  created() {
-    document.title = this.globalData.componenteFormativo
   },
 }
 </script>
 
 <style lang="sass">
-.app
-
-.contenedor-principal
-  display: flex
-  align-items: flex-start
-
-.seccion-principal
-  width: 100%
-
-  &--barra-avance-open
-    .curso-main-container
-      padding-bottom: 80px !important
+.header
+  position: sticky
+  top: 0
+  padding-top: 10px
+  padding-bottom: 10px
+  background-color: $white
+  z-index: 10010
+  line-height: 1.1em
+  &__logo
+    width: 50px
 </style>
