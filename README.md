@@ -2,7 +2,7 @@
 
 ## **Enlace GitHubPages**
 
-[https://github.com/ECORED-SENA/ECORED-BASE-INFO-2021](https://github.com/ECORED-SENA/ECORED-BASE-INFO-2021)
+[https://ecored-sena.github.io/ECORED-BASE-INFO-2021/](https://ecored-sena.github.io/ECORED-BASE-INFO-2021/)
 
 #
 
