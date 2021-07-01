@@ -1,9 +1,6 @@
-import Vue from 'vue'
+import Vue from 'ecored-base-pkg/src/vue.js'
 import App from './App.vue'
-
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import store from 'ecored-base-pkg/src/store/index.js'
 
 import './styles/_styles.sass'
 
@@ -13,17 +10,7 @@ Vue.prototype.$config = config
 const packageJson = require('../package.json')
 Vue.prototype.$package = packageJson
 
-Vue.component('Creditos', () =>
-  import(
-    '../node_modules/ecored-base-pkg/src/components/plantilla/CreditosComp.vue'
-  ),
-)
-Vue.component('Footer', () =>
-  import('../node_modules/ecored-base-pkg/src/components/plantilla/Footer.vue'),
-)
-
-Vue.config.productionTip = false
-
 new Vue({
+  store,
   render: h => h(App),
 }).$mount('#app')
