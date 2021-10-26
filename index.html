@@ -117,7 +117,7 @@
           </div>
         </div>
         <div class="col-auto tarjeta naranja p-0 d-flex justify-content-center">
-          <a href="descargas/ejemplo.pdf" target="_blank" class="boton-footer py-4 px-5">
+          <a href="descargas/ejemplo.pdf" target="_blank" class="boton-footer py-4 px-5 button-jittery">
             <div class="contenido__footer__item">
               <div class="contenido__footer__item__img me-3"><img src="./assets/ico-descarga.svg" style="width: 62px" />
               </div>
@@ -292,7 +292,7 @@
     }
 
     .modal-dialog {
-      max-width: 800px;
+      max-width: 90%;
       margin: 30px auto;
     }
 
@@ -305,6 +305,56 @@
       position: absolute;
       right: 0;
       top: -30px;
+    }
+
+    .button-jittery {
+      animation: jittery 4s infinite;
+    }
+
+    .button-jittery:hover {
+      animation: heartbeat 0.2s forwards;
+    }
+
+    @keyframes jittery {
+
+      5%,
+      50% {
+        transform: scale(1);
+      }
+
+      10% {
+        transform: scale(0.9);
+      }
+
+      15% {
+        transform: scale(1.15);
+      }
+
+      20% {
+        transform: scale(1.15) rotate(-5deg);
+      }
+
+      25% {
+        transform: scale(1.15) rotate(5deg);
+      }
+
+      30% {
+        transform: scale(1.15) rotate(-3deg);
+      }
+
+      35% {
+        transform: scale(1.15) rotate(2deg);
+      }
+
+      40% {
+        transform: scale(1.15) rotate(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      100% {
+        transform: scale(1.1);
+      }
     }
   </style>
   <!-- JavaScript Bundle with Popper -->
